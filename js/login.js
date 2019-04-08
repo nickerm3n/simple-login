@@ -7,11 +7,11 @@
 
 var desc = document.querySelector('.blacklord__desc');
 var blackLord = document.getElementById('blacklord');
+var form = document.forms['login']
 
 function submit() {
-	var form = document.forms['login'],
-		login = form.login.value.toLowerCase();
-		pass = form.password.value;
+		var login = form.login.value.toLowerCase();
+		var pass = form.password.value;
 
 	if (login === 'admin' && pass === 'blacklord') {
 		desc.style.visibility = 'visible';
@@ -21,11 +21,13 @@ function submit() {
 
 	if (login !== 'admin') {
 		document.getElementsByTagName('span')[0].style.visibility = 'visible';
+		form.login.value = '';
 
 	}
 
 	if (pass !== 'blacklord') {
 		document.getElementsByTagName('span')[1].style.visibility = 'visible';
+		form.password.value = '';
 	}
 }
 
