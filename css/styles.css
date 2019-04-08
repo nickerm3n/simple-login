@@ -1,0 +1,120 @@
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+/* 	transition: all .1s ease-in-out; */
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+html {
+	height: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+form {
+	margin-bottom: 150px;
+	padding: 10px 0;
+	background: #e8d8ff;
+	border: 1px solid;
+	width: 250px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .5);
+	position: relative;
+}
+
+@keyframes wiggle {
+	from {transform: rotate(-2deg)}
+	50% {transform: rotate(0deg)}
+	to {transform: rotate(-2deg)}
+}
+
+
+#blacklord {
+	width: 240px;
+	height: 175px;
+	background: url('../images/bl.png') no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 0;
+	z-index: -1;
+	top: -30px;
+	animation: wiggle 2s infinite ease-in-out;
+	transition: all .4s ease-in-out; */
+	
+}
+
+.blacklord__desc {
+	visibility: hidden;
+}
+
+.decorator {
+	display: flex;
+	flex-direction: column;
+}
+
+input {
+	background: #FFF;
+	padding: 5px;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	border: 1px solid transparent;
+}
+
+input:focus {
+	border-color: #b38bff;
+}
+
+button {
+	background: #9265ff;
+	width: 100px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+button:active {
+	background: #673dff;
+}
+
+
+span {
+	visibility: hidden;
+	padding-top: 5px;
+	color: red;
+}
